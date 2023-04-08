@@ -5,13 +5,11 @@
 
 from typing import List
 
+import bisect
+
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        nums = set(nums)
-        nums.add(target)
-        nums = list(nums)
-
-        return nums.index(target)
+        return bisect.bisect_left(nums, target)
 
 
 a = Solution()
