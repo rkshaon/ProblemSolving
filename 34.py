@@ -4,12 +4,7 @@
 # Array, Binary Search
 # https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
-# def search_range(nums, target):
-#     return
-
-# print(search_range(nums = [5,7,7,8,8,10], target = 8))
-# print(search_range(nums = [5,7,7,8,8,10], target = 6))
-# print(search_range(nums = [], target = 0))
+# O(log n) solution
 from typing import List
 
 class Solution:
@@ -28,13 +23,10 @@ class Solution:
             mid = (left + right) // 2
 
             if target > nums[mid]:
-                print(f"\n{nums}\t{target}\tLeft migrated `{left}` to `{mid + 1}`")
-                left = mid + 1                
+                left = mid + 1
             elif target < nums[mid]:
-                print(f"\n{nums}\t{target}\tRight migrated `{right}` to `{mid - 1}`")
                 right = mid - 1
             else:
-                print(f"\n{nums}\t{target}\tFound `{mid}` to `{mid + 1}`")
                 index = mid
 
                 if leftBias:
