@@ -60,7 +60,7 @@ class Solution:
 
         while left <= right:
             mid = (left + right) // 2
-            
+
             if nums[mid] == target:
                 return True
             
@@ -71,7 +71,7 @@ class Solution:
                 if nums[left] <= target < nums[mid]:
                     right = mid - 1
                 else:
-                    left = mid - 1
+                    left = mid + 1
             else:
                 if nums[mid] < target <= nums[right]:
                     left = mid + 1
@@ -86,3 +86,4 @@ a = Solution()
 
 print(a.search(nums = [2,5,6,0,0,1,2], target = 0))
 print(a.search(nums = [2,5,6,0,0,1,2], target = 3))
+print(a.search(nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1], target = 2))
