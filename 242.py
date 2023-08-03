@@ -5,6 +5,7 @@
 
 # from typing import str
 
+# New solution 1
 # class Solution:
 #     def isAnagram(self, s: str, t: str) -> bool:
 #         if len(s) != len(t):
@@ -22,6 +23,7 @@
         
 #         return True
 
+# New solution 2
 from collections import Counter
  
 class Solution:
