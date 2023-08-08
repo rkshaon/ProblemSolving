@@ -8,27 +8,29 @@ from typing import List
 
 
 class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        return self.search(nums=nums, left=0, right=len(nums)-1)
+    # def findMin(self, nums: List[int]) -> int:
+    #     return self.search(nums=nums, left=0, right=len(nums)-1)
 
 
-    def search(self, nums: List[int], left: int, right: int) -> int:
-        if left == right:
-            return nums[left]
+    # def search(self, nums: List[int], left: int, right: int) -> int:
+    #     if left == right:
+    #         return nums[left]
         
-        mid = (left + right) // 2
+    #     mid = (left + right) // 2
 
-        if nums[mid] > nums[right]:
-            return self.search(nums=nums, left=mid+1, right=right)
+    #     if nums[mid] > nums[right]:
+    #         return self.search(nums=nums, left=mid+1, right=right)
 
-        elif nums[mid] < nums[right]:
-            return self.search(nums=nums, left=left, right=mid)
+    #     elif nums[mid] < nums[right]:
+    #         return self.search(nums=nums, left=left, right=mid)
         
-        else:
-            left_min = self.search(nums=nums, left=left, right=mid)
-            right_min = self.search(nums=nums, left=mid+1, right=right)
+    #     else:
+    #         left_min = self.search(nums=nums, left=left, right=mid)
+    #         right_min = self.search(nums=nums, left=mid+1, right=right)
             
-            return min(left_min, right_min)
+    #         return min(left_min, right_min)
+    def findMind(self, nums: List[int]) -> int:
+        pass
 
 
 a = Solution()
