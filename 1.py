@@ -2,6 +2,10 @@
 # 1
 # Two Sum
 # https://leetcode.com/problems/two-sum/
+# Array, Hash Table
+
+
+from typing import List
 
 # Solution 1
 # Time complexity: O(n^2)
@@ -26,4 +30,22 @@ class Solution:
             
             if result in hash_map and hash_map[result] != i:
                 return [i, hash_map[result]]
+            
+
+# Solution 3
+# Time complexity: O(n)
+# Memory compexity: O(n)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        prevMap = {} # Value: Index
+
+        for i, n in enumerate(nums):
+            diff = target - n
+
+            if diff in prevMap:
+                return [prevMap[diff], i]
+            
+            prevMap[n] = i
+        
+        return
         
